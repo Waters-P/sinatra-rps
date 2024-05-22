@@ -4,9 +4,30 @@
     <title>Sinatra RPS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <style>
+    
+      .guide
+      {
+        display: block; 
+        justify-content: space-between;
+      }
+
+    </style>
   </head>
 
   <body>
+
+  <div class="guide">
+
+    <div><a href="/"> Start </a></div>
+    
+    <div><a href="/Play Scissors"> Play Scissors </a></div>
+  
+    <div><a href="/Play Paper"> Play Paper </a></div>
+  
+  </div>
+
 
     <%= yield %>
 
