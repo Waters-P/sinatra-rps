@@ -14,16 +14,19 @@
       <p style="color: green"><%= @win %></p>
 
     <% elsif @they == "paper" && @we == "rock" %>
-      <p style="color: red"><% @lose %></p>    
+      <p style="color: red"><%= @lose %></p>    
     
     <% elsif @they == "paper" && @we == "scissors" %>
-      <p style="color: green"><% @win %></p>
+      <p style="color: green"><%= @win %></p>
 
     <% elsif @they == "rock" && @we == "scissors" %> 
-      <p style="color: red"><% @lose %></p>
+      <p style="color: red"><%= @lose %></p>
 
-    <% elseif @they == "rock" && @we == "paper" %>
-      <p style="color: green"><% @win %></p>   
+    <% elsif @they == "rock" && @we == "paper" %>
+      <p style="color: green"><%= @win %></p>   
+
+    <% else %>
+      <p><%= 1 %></p>    
 
 
   <% end %>

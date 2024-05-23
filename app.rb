@@ -43,3 +43,20 @@ get("/Play Paper") do
 
     erb(:paper)
 end
+
+
+get("/Play Rock") do
+
+  @toolbox = ["rock", "scissors", "paper"]
+
+  @we = @toolbox[rand(0..2)]
+  @they = @toolbox[rand(0..2)]
+
+  @win = " Winner. They used #{@they} and we used #{@we}."
+  @lose = " Depricated. They used #{@they} and we used #{@we}."
+  @draw = " Tie. They used #{@they} and we used #{@we}."
+
+  erb(:rock)
+
+
+end 
