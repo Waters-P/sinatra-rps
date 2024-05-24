@@ -16,6 +16,7 @@ get("/scissors") do
     @we = @toolbox[rand(0..2)]
     @they = @toolbox[rand(0..2)]
 
+    @we_play_scissors = @toolbox[0]
     @they_scissors = "They played scissors!"
     @we_scissors = "We played scissors!"
   
@@ -45,6 +46,7 @@ get("/paper") do
     @they_scissors = "They played scissors!"
     @we_scissors = "We played scissors!"
   
+    @we_play_paper = @toolbox[0]
     @they_paper = "They played paper!"
     @we_paper = "We played paper!"
   
@@ -70,9 +72,11 @@ get("/rock") do
   @we_scissors = "We played scissors!"
   @they_scissors = "They played scissors!"
 
+  
   @we_paper = "We played paper!"
   @they_paper = "They played paper!"
   
+  @we_play_rock = @toolbox[0]
   @we_rock = "We played rock!"
   @they_rock = "They played rock!"
   
