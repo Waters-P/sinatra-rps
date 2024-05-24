@@ -5,29 +5,55 @@
 
  
 
+
     <% if @they == @we %>
-      <p style="color: blue"><%= @draw %></p>
+      <p style="color: green"><%= "We played #{@we}!" %></p>
+      <p style="color: blue"><%= "They played #{@they}!" %></p>   
+      <p style="color: green"><%= @draw %></p>   
+      
     
     <% elsif @they == "scissors" && @we == "paper" %>
-      <p style="color: red"><%= @lose %></p> 
+      <p style="color: green"><%= @we_paper %></p> 
+      <p style="color: red"><%= @they_scissors %></p>  
+      <p style="color: green"><%= @lose %></p>   
+       
 
-    <% elsif @they == "scissors" && @we == "rock"  %>
-      <p style="color: green"><%= @win %></p>
+    <% elsif @they == "scissors" && @we == "rock" %>
+      <p style="color: green"><%= @we_rock %></p>
+      <p style="color: green"><%= @they_scissors %></p>   
+      <p style="color: green"><%= @win %></p>   
+      
 
     <% elsif @they == "paper" && @we == "rock" %>
-      <p style="color: red"><%= @lose %></p>    
+      <p style="color: green"><%= @we_rock %></p> 
+      <p style="color: red"><%= @they_paper %></p>      
+      <p style="color: green"><%= @lose %> </p>   
+      
     
     <% elsif @they == "paper" && @we == "scissors" %>
-      <p style="color: green"><%= @win %></p>
+      <p style="color: green"><%= @we_scissors %></p> 
+      <p style="color: green"><%= @they_paper %></p>  
+      <p style="color: green"><%= @win %></p>   
+      
+
 
     <% elsif @they == "rock" && @we == "scissors" %> 
-      <p style="color: red"><%= @lose %></p>
+      <p style="color: green"><%= @we_scissors %></p>  
+      <p style="color: red"><%= @they_rock %></p> 
+      <p style="color: green"><%= @lose %></p>   
+      
 
     <% elsif @they == "rock" && @we == "paper" %>
-      <p style="color: green"><%= @win %></p>   
+      <p style="color: green"><%= @we_rock %></p>  
+      <p style="color: green"><%= @they_rock %></p>    
+      <p style="color: green"><%= @win %></p>  
+      
 
     <% else %>
       <p><%= 1 %></p>  
 
 
     <% end %>
+
+
+<div><a href="/"> Rules </a></div>

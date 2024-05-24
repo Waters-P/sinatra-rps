@@ -2,59 +2,84 @@ require "sinatra"
 require "sinatra/reloader"
 
 get("/") do
-
-  "
-  <h1>Welcome to your Sinatra App!</h1>
-
-  "
   
-  erb(:mountains)
+  erb(:base)
   
 end
 
 
 
-get("/Play Scissors") do
+get("/scissors") do
 
     @toolbox = ["scissors", "paper", "rock"]
 
     @we = @toolbox[rand(0..2)]
     @they = @toolbox[rand(0..2)]
 
-    @win = " Winner. They used #{@they} and we used #{@we}."
-    @lose = " Depricated. They used #{@they} and we used #{@we}."
-    @draw = " Tie. They used #{@they} and we used #{@we}."
+    @they_scissors = "They played scissors!"
+    @we_scissors = "We played scissors!"
+  
+    @they_paper = "They played paper!"
+    @we_paper = "We played paper!"
+  
+    @they_rock = "They played rock!"
+    @we_rock = "We played rock!"
+  
+    @win = "We won!"
+    @lose = "We lost!"
+    @draw = "We tied!"
+  
 
     erb(:scissors)
 
 
 end
 
-get("/Play Paper") do
+get("/paper") do
 
     @toolbox = ["paper", "rock", "scissors"]
 
     @we = @toolbox[rand(0..2)]
     @they = @toolbox[rand(0..2)]
 
-    @win = " Winner. They used #{@they} and we used #{@we}."
-    @lose = " Depricated. They used #{@they} and we used #{@we}."
-    @draw = " Tie. They used #{@they} and we used #{@we}."
+    @they_scissors = "They played scissors!"
+    @we_scissors = "We played scissors!"
+  
+    @they_paper = "They played paper!"
+    @we_paper = "We played paper!"
+  
+    @they_rock = "They played rock!"
+    @we_rock = "We played rock!"
+  
+    @win = "We won!"
+    @lose = "We lost!"
+    @draw = "We tied!"
+  
 
     erb(:paper)
 end
 
 
-get("/Play Rock") do
+get("/rock") do
 
   @toolbox = ["rock", "scissors", "paper"]
 
   @we = @toolbox[rand(0..2)]
   @they = @toolbox[rand(0..2)]
 
-  @win = " Winner. They used #{@they} and we used #{@we}."
-  @lose = " Depricated. They used #{@they} and we used #{@we}."
-  @draw = " Tie. They used #{@they} and we used #{@we}."
+  @we_scissors = "We played scissors!"
+  @they_scissors = "They played scissors!"
+
+  @we_paper = "We played paper!"
+  @they_paper = "They played paper!"
+  
+  @we_rock = "We played rock!"
+  @they_rock = "They played rock!"
+  
+
+  @win = "We won!"
+  @lose = "We lost!"
+  @draw = "We tied!"
 
   erb(:rock)
 
